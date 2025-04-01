@@ -20,7 +20,7 @@ class PokemonBench(BaseBench):
         return "/app/evaluation_sessions/latest_evaluation"
     
     def get_log_files_dir_in_container(self) -> str:
-        return "/app/evaluation_sessions/latest_evaluation"
+        return "/app/logs" # avoid duplicate mount point
     
     def get_result(self, task_id: str) -> BenchmarkResult:
         try:
